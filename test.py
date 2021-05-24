@@ -3,6 +3,7 @@ import os
 import tensorflow as tf
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# tf.get_logger().setLevel(3)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 tf.keras.backend.set_floatx('float64')
