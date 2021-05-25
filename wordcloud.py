@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud
+# from wordcloud import WordCloud
+import wordcloud as wc
 
 
 # data from:https://www.kaggle.com/uciml/sms-spam-collection-dataset
@@ -18,9 +19,9 @@ def visualize(label):
   for msg in df[df['labels'] == label]['data']:
     msg = msg.lower()
     words += msg + ' '
-  wordcloud = WordCloud(width=600, height=400).generate(words)
+  wordcloud = wc.WordCloud(width=600, height=400).generate(words)
   plt.imshow(wordcloud)
   plt.axis('off')
   plt.show()
 
-visualize('spam')
+#visualize('spam')

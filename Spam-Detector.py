@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-from wordcloud import WordCloud
-
+# from wordcloud import WordCloud
+import wordcloud as wc
 
 # data from:https://www.kaggle.com/uciml/sms-spam-collection-dataset
 df = pd.read_csv('spam.csv', encoding='ISO-8859-1')
@@ -41,7 +41,7 @@ def visualize(label):
   for msg in df[df['labels'] == label]['data']:
     msg = msg.lower()
     words += msg + ' '
-  wordcloud = WordCloud(width=600, height=400).generate(words)
+  wordcloud = wc.WordCloud(width=600, height=400).generate(words)
   plt.imshow(wordcloud)
   plt.axis('off')
   plt.show()
