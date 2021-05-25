@@ -14,7 +14,7 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-	df= pd.read_csv("/Users/radkrishr/Projects/Conda_works/nlp/Spam-Detector-ML-App/YoutubeSpamMergedData.csv")
+	df= pd.read_csv("/home/radkrishr/nltk-projects/rk-nlp-projects/Spam-Detector-ML-App/YoutubeSpamMergedData.csv")
 	df_data = df[["CONTENT","CLASS"]]
 	# Features and Labels
 	df_x = df_data['CONTENT']
