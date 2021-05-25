@@ -1,12 +1,17 @@
-# Stemming
+# Stemming & Lemmatizing 
 
 import nltk
 from nltk.stem.porter import PorterStemmer
+
+# Stemming 
+
+print("Stemming usring PorterStemmer:\n")
 ps = PorterStemmer()
 print(ps.stem("runs"))
 print(ps.stem("running"))
 print(ps.stem("likes"))
 print(ps.stem("wolves"))
+print("\n")
 
 # Lemmatization
 # https://www.geeksforgeeks.org/python-lemmatization-with-nltk/
@@ -14,12 +19,15 @@ print(ps.stem("wolves"))
 # To be executed only once
 # nltk.download('wordnet')
  
+ # Lemmatizing
+
+print("Lemmatizing using WordNetLemmatizer:\n")
 from nltk.stem import WordNetLemmatizer 
 lemmatizer = WordNetLemmatizer() 
 print(lemmatizer.lemmatize("wolves"))
 print(lemmatizer.lemmatize("worst", pos="a"))
 print(lemmatizer.lemmatize("better", pos="a"))
-
+print("\n")
 
 # POS Tagging
 #https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html
