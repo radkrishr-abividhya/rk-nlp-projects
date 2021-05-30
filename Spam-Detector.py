@@ -46,8 +46,8 @@ def visualize(label):
   plt.axis('off')
   plt.show()
 
-#visualize('spam')
-#visualize('ham')
+visualize('spam')
+visualize('ham')
 
 
 # see what we're getting wrong
