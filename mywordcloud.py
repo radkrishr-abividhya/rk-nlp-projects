@@ -20,8 +20,8 @@ def visualize(label):
   for msg in df[df['labels'] == label]['data']:
     msg = msg.lower()
     words += msg + ' '
-  word_cloud = wc.WordCloud(width=600, height=400).generate(words)
-  plt.imshow(word_cloud)
+  wordcloud = wc.WordCloud(width=600, height=400).generate(words)
+  plt.imshow(wordcloud)
   plt.axis('off')
   plt.show()
 
